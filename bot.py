@@ -2,7 +2,7 @@
 from discord.ext import commands
 from discord.ext.commands import Bot
 
-bot = commands.Bot(command_prefix="/", status=discord.Status.idle, activity=discord.Game(name="Testing.."))
+bot = commands.Bot(command_prefix="/", status=discord.Status.idle, activity=discord.Game(name="With your mum..."))
 
 @bot.command()
 async def verify(ctx):
