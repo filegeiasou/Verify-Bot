@@ -11,5 +11,7 @@ async def verify(ctx):
 @bot.command()
 async def pipe(ctx):
  await ctx.channel.send("Yes pipe.")
+if (ctx==pipe):
+ print("https://discordapp.com/api/oauth2/authorize?client_id=577542336117211146&permissions=0&scope=bot"
  
 bot.run("NTc3NTQyMzM2MTE3MjExMTQ2.XNmmTg.hpekKwefCTL6FOr9LllnDySJ5gY")
