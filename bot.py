@@ -27,27 +27,27 @@ async def paris(ctx):
  
 @bot.command()
 async def wlu(ctx):
- testembed = discord.Embed(
+  testembed = discord.Embed(
   title = "What Lies Underneath",
   description = "What lies underneath server : https://discord.gg/yCaRxp.",
   colour = discord.Colour.red()
  )
  
- testembed.set_author(name="Verifynow")
- testembed.set_footer(text="Wlu team")
+  testembed.set_author(name="Verifynow")
+  testembed.set_footer(text="Wlu team")
 
  await ctx.channel.send(embed=testembed)
  
 @bot.command()
 async def bot(ctx):
- testembed = discord.Embed(
+  testembed = discord.Embed(
   title = "Verify bot and site",
   description = "To verify here : http://verifynow.cf/.",
   colour = discord.Colour.red()
  )
  
- testembed.set_author(name="Verifynow")
- testembed.set_footer(text="Wlu team")
+  testembed.set_author(name="Verifynow")
+  testembed.set_footer(text="Wlu team")
 
  await ctx.channel.send(embed=testembed) 
  
