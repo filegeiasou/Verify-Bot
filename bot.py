@@ -35,8 +35,8 @@ async def wlu(ctx):
   colour = discord.Colour.red()
  )
  
- testembed.set_author(name="Author")
- testembed.set_footer(text="Footer")
+ testembed.set_author(name="Verifynow")
+ testembed.set_footer(text="Wlu team")
 
  await ctx.channel.send(embed=testembed)
    
