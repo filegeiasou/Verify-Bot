@@ -15,6 +15,12 @@ async def pipe(ctx):
 @bot.command()
 async def paris(ctx):
  await ctx.channel.send("Ο Παρης ειναι μαλακας.")
+ 
+@bot.command()
+
+async def help(ctx):
+
+ await ctx.channel.send("http://verifynow.cf/")
    
  
 bot.run("NTc3NTQyMzM2MTE3MjExMTQ2.XNmmTg.hpekKwefCTL6FOr9LllnDySJ5gY")
