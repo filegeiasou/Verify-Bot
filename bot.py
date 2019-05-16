@@ -5,7 +5,7 @@ from discord.ext.commands import Bot
 bot = commands.Bot(command_prefix="/", status=discord.Status.idle, activity=discord.Game(name="With your mom..."))
 
 @bot.command()
-async def verify(ctx):
+async def hello(ctx):
  await ctx.channel.send("Hello.")
  
 @bot.command()
@@ -34,6 +34,20 @@ async def wlu(ctx):
  testembed.set_footer(text="Wlu team")
 
  await ctx.channel.send(embed=testembed)
+ 
+@bot.command()
+async def verify(ctx):
+ testembed = discord.Embed(
+   title = "Verify bot",
+   description = "verify bot and site here : http://verifynow.cf/.",
+   colour = discord.Colour.red()
+ )
+ 
+ testembed.set_author(name="Verifynow")
+ testembed.set_footer(text="Wlu team")
+
+ await ctx.channel.send(embed=testembed)
+
 
  
 bot.run("NTc3NTQyMzM2MTE3MjExMTQ2.XNmmTg.hpekKwefCTL6FOr9LllnDySJ5gY")
