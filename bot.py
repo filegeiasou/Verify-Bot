@@ -25,6 +25,12 @@ async def site(ctx):
 @bot.command()
 async def paris(ctx):
  await ctx.channel.send("Paris is an asshole.")
+ 
+@bot.command()
+
+async def wlu(ctx):
+
+ await ctx.channel.send("What lies underneath server : https://discord.gg/yCaRxp.")
    
  
 bot.run("NTc3NTQyMzM2MTE3MjExMTQ2.XNmmTg.hpekKwefCTL6FOr9LllnDySJ5gY")
