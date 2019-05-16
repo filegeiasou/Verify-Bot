@@ -38,7 +38,7 @@ async def wlu(ctx):
 
  await ctx.channel.send(embed=testembed)
 
- @bot.command()
+@bot.command()
 async def bot(ctx):
  testembed = discord.Embed(
    title = "Verify bot",
