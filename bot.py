@@ -18,7 +18,7 @@ async def paris(ctx):
  
 @bot.command()
 
-async def help(ctx):
+async def info(ctx):
 
  await ctx.channel.send("http://verifynow.cf/")
    
