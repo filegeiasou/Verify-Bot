@@ -2,7 +2,7 @@
 from discord.ext import commands
 from discord.ext.commands import Bot
 
-bot = commands.Bot(command_prefix="*", status=discord.Status.idle, activity=discord.Game(name="With your mom..."))
+bot = commands.Bot(command_prefix="/", status=discord.Status.idle, activity=discord.Game(name="With your mom..."))
 
 @bot.command()
 async def verify(ctx):
@@ -26,11 +26,6 @@ async def site(ctx):
 async def paris(ctx):
  await ctx.channel.send("Paris is an asshole.")
  
-@bot.command()
-
-async def wlu(ctx):
-
- await ctx.channel.send("What lies underneath server : https://discord.gg/yCaRxp.")
  
 @bot.command()
 async def wlu(ctx):
