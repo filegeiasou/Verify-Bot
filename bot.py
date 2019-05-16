@@ -48,6 +48,7 @@ async def bot(ctx):
   colour = discord.Colour.red()
 
  )
+ 
  testembed.set_author(name="Verifynow")
  testembed.set_footer(text="Wlu team")
 
