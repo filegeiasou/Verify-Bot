@@ -31,6 +31,19 @@ async def paris(ctx):
 async def wlu(ctx):
 
  await ctx.channel.send("What lies underneath server : https://discord.gg/yCaRxp.")
+ 
+@bot.command()
+async def wlu(ctx):
+ testembed = discord.Embed(
+  title = "What Lies Underneath",
+  description = "What lies underneath server : https://discord.gg/yCaRxp.",
+  colour = discord.Colour.red()
+ )
+ 
+ testembed.set_author(name="Author")
+ testembed.set_footer(text="Footer")
+
+ await ctx.channel.send(embed=testembed)
    
  
 bot.run("NTc3NTQyMzM2MTE3MjExMTQ2.XNmmTg.hpekKwefCTL6FOr9LllnDySJ5gY")
