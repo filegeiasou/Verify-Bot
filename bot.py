@@ -39,6 +39,32 @@ async def wlu(ctx):
  testembed.set_footer(text="Wlu team")
 
  await ctx.channel.send(embed=testembed)
+ 
+@bot.command()
+
+async def bot(ctx):
+
+ testembed = discord.Embed(
+
+  title = "Verify bot and site",
+
+  description = "To verify here : http://verifynow.cf/.",
+
+  colour = discord.Colour.blue()
+
+ )
+
+ 
+
+ testembed.set_author(name="Verifynow")
+
+ testembed.set_footer(text="Wlu team")
+
+
+
+ await ctx.channel.send(embed=testembed)
+
+   
    
  
 bot.run("NTc3NTQyMzM2MTE3MjExMTQ2.XNmmTg.hpekKwefCTL6FOr9LllnDySJ5gY")
