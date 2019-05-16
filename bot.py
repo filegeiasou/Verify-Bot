@@ -17,9 +17,7 @@ async def παρης(ctx):
  await ctx.channel.send("Ο Παρης ειναι μαλακας.")
  
 @bot.command()
-
 async def site(ctx):
-
  await ctx.channel.send(" To verify here : http://verifynow.cf/")
  
 @bot.command()
@@ -46,7 +44,6 @@ async def bot(ctx):
   title = "Verify bot and site",
   description = "To verify here : http://verifynow.cf/.",
   colour = discord.Colour.red()
-
  )
  
  testembed.set_author(name="Verifynow")
