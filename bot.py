@@ -50,7 +50,7 @@ async def bot(ctx):
 
   description = "To verify here : http://verifynow.cf/.",
 
-  colour = discord.Colour.blue()
+  colour = discord.Colour.red()
 
  )
 
