@@ -39,7 +39,7 @@ async def wlu(ctx):
 async def verify(ctx):
  testembed = discord.Embed(
    title = "Verify bot",
-   description = "verify bot and site here : http://verifynow.cf/.",
+   description = "Verify bot and site here : http://verifynow.cf/.",
    colour = discord.Colour.red()
  )
  
