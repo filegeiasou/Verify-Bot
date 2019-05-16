@@ -2,7 +2,7 @@
 from discord.ext import commands
 from discord.ext.commands import Bot
 
-bot = commands.Bot(command_prefix="/", status=discord.Status.idle, activity=discord.Game(name="With your mom..."))
+bot = commands.Bot(command_prefix="/", status=discord.discord.Status.online, activity=discord.Game(name="/help"))
 
 @bot.command()
 async def hello(ctx):
