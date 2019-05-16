@@ -13,7 +13,7 @@ async def pipe(ctx):
  await ctx.channel.send("Yes pipe.")
  
 @bot.command()
-async def paris(ctx):
+async def παρης(ctx):
  await ctx.channel.send("Ο Παρης ειναι μαλακας.")
  
 @bot.command()
@@ -21,6 +21,10 @@ async def paris(ctx):
 async def site(ctx):
 
  await ctx.channel.send(" To verify here : http://verifynow.cf/")
+ 
+@bot.command()
+async def paris(ctx):
+ await ctx.channel.send("Paris is an asshole.")
    
  
 bot.run("NTc3NTQyMzM2MTE3MjExMTQ2.XNmmTg.hpekKwefCTL6FOr9LllnDySJ5gY")
