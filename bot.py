@@ -16,9 +16,6 @@ async def pipe(ctx):
 async def παρης(ctx):
  await ctx.channel.send("Ο Παρης ειναι μαλακας.")
  
-@bot.command()
-async def site(ctx):
- await ctx.channel.send(" To verify here : http://verifynow.cf/")
  
 @bot.command()
 async def paris(ctx):
