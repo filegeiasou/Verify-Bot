@@ -27,6 +27,7 @@ async def wlu(ctx):
  testembed = discord.Embed(
    title = "What Lies Underneath",
    description = "What lies underneath server : https://discord.gg/cwerZuM.",
+   description = "What lies underneath site : https://whatliesunderneath.weebly.com/.",
    colour = discord.Colour.blue()
  )
  
