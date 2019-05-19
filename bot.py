@@ -48,6 +48,17 @@ async def verify(ctx):
 
  await ctx.channel.send(embed=testembed)
 
+@bot.command()
+async def test(ctx):
+ testembed = discord.Embed(
+   title = "Verify bot",
+   description = "Evryone you want to help me send me email here : http://verifynow.cf/.",
+   colour = discord.Colour.purple()
+ )
+ 
+ testembed.set_author(name="Verifynow")
+ testembed.set_footer(text="Wlu team")
 
+ await ctx.channel.send(embed=testembed)
  
 bot.run("NTc5MzU1NjEwMjY5NzQ1MTgz.XOA9Kw.meCipXhfSqDosWoRucfDY-LjnS0")
