@@ -52,7 +52,7 @@ async def verify(ctx):
 async def test(ctx):
  testembed = discord.Embed(
    title = "Verify bot",
-   description = "Evryone you want to help me send me email here : http://verifynow.cf/.",
+   description = "Everyone who wants to help with bot send email here : http://verifynow.cf/.",
    colour = discord.Colour.purple()
  )
  
