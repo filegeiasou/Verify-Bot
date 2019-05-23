@@ -4,6 +4,14 @@ from discord.ext.commands import Bot
 
 bot = commands.Bot(command_prefix="/", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
+
+@bot.command(pass_context = True)
+async def kick(ctx, userName: discord.User):
+    """Kick A User from server"""
+    await client.kick(userName)
+    await client.say("__**Successfully User Has Been Kicked!**__")
+
+
 @bot.command()
 async def hello(ctx):
  await ctx.channel.send("Hello.")
