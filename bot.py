@@ -6,8 +6,9 @@ bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=di
 
 
 @bot.command()
-async def kick(ctx, userName: discord.User):
-    await bot.kick(userName)
+async def kick(ctx, user: discord.User = None):
+ await ctx.guild.kick(user)
+ await ctx.channel.send(f"I kicked {user}!")
     
 @bot.command()
 async def hello(ctx):
