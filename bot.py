@@ -5,6 +5,17 @@ from discord.ext.commands import Bot
 bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
 
+
+
+@bot.command()
+async def clear(ctx, amount: int):
+ admins = ["filegeiasou#0935"]
+ if str(ctx.message.author) in admins:  
+  await ctx.channel.purge(limit=amount)
+  await ctx.channel.send(f"Cleared {amount} messages.")
+  
+  
+  
 @bot.command()
 async def kick(ctx, user: discord.User = None):
  await ctx.guild.kick(user)
