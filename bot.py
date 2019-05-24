@@ -5,10 +5,11 @@ from discord.ext.commands import Bot
 bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
 
-bot.command(‘guildMemberAdd’, member => {
-  member.send(`Welcome on the server! Please be aware that we won’t tolerate troll, spam or harassment. Have fun 😀`)
-})
-
+@bot.event
+async def on_member_join(member):
+    channel = get(member.server.channels, name="general")
+    await bot.send_message(channel,"welcome") 
+    
 @bot.command()
 async def clear(ctx, amount: int):
  admins = ["filegeiasou#0935"]
