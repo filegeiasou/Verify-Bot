@@ -5,7 +5,14 @@ from discord.ext.commands import Bot
 
 bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
    
-   
+@bot.event
+async def on_ready():
+   print(f"[bot.user.name] is ready")
+   await bot.change_presence(activity=disord.Game(name="Verifybot")
+                             
+@bot.event
+async def on_member_join(member):
+   channel = discord.un
 @bot.command()
 async def clear(ctx, amount: int):
  admins = ["filegeiasou#0935"]
