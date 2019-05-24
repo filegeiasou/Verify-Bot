@@ -7,15 +7,15 @@ bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=di
    
 @bot.event
 async def on_ready():
-   print(f"[bot.user.name] is ready")
-   await bot.change_presence(activity=disord.Game(name="Verifybot")
+ print(f"{bot.user.name} is ready")
+ await bot.change_presence(activity=discord.Game(name="Verifybot"))
                                             
 @bot.event
 async def on_member_join(member):
-   channel = discord.utils.get(member.guild.channels, name="Welcome")
-   await channel.send(f"Welcome[member.mention]")
-   role = discord.utils.get(member.guild.roles, name="Member")
-   await member.add_roles(role)
+ channel = discord.utils.get(member.guild.channels, name="welcome")
+ await channel.send(f"Welcome {member.mention}")
+ role = discord.utils.get(member.guild.roles, name="Member")
+ await member.add_roles(role)
                             
 @bot.command()
 async def clear(ctx, amount: int):
