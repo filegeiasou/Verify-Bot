@@ -23,14 +23,17 @@ async def clear(ctx, amount: int):
  if str(ctx.message.author) in admins:  
   await ctx.channel.purge(limit=amount)
   await ctx.channel.send(f"Cleared {amount} messages.")
-  
-  
+ else:
+  await ctx.channel.send("You do not have permission to use this command.")
   
 @bot.command()
 async def kick(ctx, user: discord.User = None):
  admins = ["filegeiasou#0935"]
- await ctx.guild.kick(user)
- await ctx.channel.send(f"I kicked {user}!")
+ if str(ctx.message.author) in admins:
+  await ctx.guild.kick(user)
+  await ctx.channel.send(f"I kicked {user}!")
+ else:
+  await ctx.channel.send("You do not have permission to use this command.")
     
 @bot.command()
 async def hello(ctx):
