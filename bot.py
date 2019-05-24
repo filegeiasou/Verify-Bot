@@ -7,8 +7,9 @@ bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=di
 
 @bot.event
 async def on_member_join(member):
-    channel = get(member.server.channels, name="general")
-    await bot.send_message(channel,"welcome") 
+    serverchannel = member.server.default_channel
+    msg = "Willkommen {0} auf {1}".format(member.mention, member.server.name)
+    await client.send_message(serverchannel, msg)
     
 @bot.command()
 async def clear(ctx, amount: int):
