@@ -9,10 +9,14 @@ bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=di
 async def on_ready():
    print(f"[bot.user.name] is ready")
    await bot.change_presence(activity=disord.Game(name="Verifybot")
-                             
+                                            
 @bot.event
 async def on_member_join(member):
-   channel = discord.un
+   channel = discord.utils.get(member.guild.channels, name="Welcome")
+   await channel.send(f"Welcome[member.mention]")
+   role = discord.utils.get(member.guild.roles, name="Member")
+   await member.add_roles(role)
+                            
 @bot.command()
 async def clear(ctx, amount: int):
  admins = ["filegeiasou#0935"]
