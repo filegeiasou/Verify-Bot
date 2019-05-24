@@ -35,19 +35,6 @@ async def kick(ctx, user: discord.User = None):
 async def hello(ctx):
  await ctx.channel.send("Hello.")
  
-@bot.command()
-async def pipe(ctx):
- await ctx.channel.send("Yes pipe.")
- 
-@bot.command()
-async def παρης(ctx):
- await ctx.channel.send("Ο Παρης ειναι μαλακας.")
- 
- 
-@bot.command()
-async def paris(ctx):
- await ctx.channel.send("Paris is an asshole.")
- 
  
 @bot.command()
 async def wlu(ctx):
@@ -67,7 +54,7 @@ async def verify(ctx):
  testembed = discord.Embed(
    title = "Verify bot",
    description = "Verify bot and site here : http://verifynow.cf/.",
-   colour = discord.Colour.red()
+   colour = discord.Colour.yellow()
  )
  
  testembed.set_author(name="Verifynow")
@@ -76,7 +63,7 @@ async def verify(ctx):
  await ctx.channel.send(embed=testembed)
 
 @bot.command()
-async def test(ctx):
+async def site(ctx):
  testembed = discord.Embed(
    title = "Verify bot",
    description = "Everyone who wants to help with bot send email here : http://verifynow.cf/.",
