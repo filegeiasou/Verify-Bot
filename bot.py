@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=di
 @bot.event
 async def on_ready():
  print(f"{bot.user.name} is ready")
- await bot.change_presence(activity=discord.Game(name="Verifybot"))
+ await bot.change_presence(activity=discord.Game(name="Made by filegeiasou#0935"))
                                             
 @bot.event
 async def on_member_join(member):
@@ -28,6 +28,7 @@ async def clear(ctx, amount: int):
   
 @bot.command()
 async def kick(ctx, user: discord.User = None):
+ admins = ["filegeiasou#0935"]
  await ctx.guild.kick(user)
  await ctx.channel.send(f"I kicked {user}!")
     
