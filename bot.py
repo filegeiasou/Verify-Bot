@@ -53,9 +53,9 @@ async def wlu(ctx):
 @bot.command()
 async def verify(ctx):
  testembed = discord.Embed(
-   title = "Verify bot",
-   description = "Verify bot and site here : http://verifynow.cf/.",
-   colour = discord.Colour.yellow()
+  title = "Verify bot",
+  description = "Verify bot and site here : http://verifynow.cf/.",
+  colour = discord.Colour.yellow()
  )
  
  testembed.set_author(name="Verifynow")
