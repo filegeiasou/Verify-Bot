@@ -5,7 +5,9 @@ from discord.ext.commands import Bot
 bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
 
-
+bot.command(‘guildMemberAdd’, member => {
+  member.send(`Welcome on the server! Please be aware that we won’t tolerate troll, spam or harassment. Have fun 😀`)
+})
 
 @bot.command()
 async def clear(ctx, amount: int):
