@@ -1,16 +1,26 @@
-﻿import discord
+import discord
+import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
 
 bot = commands.Bot(command_prefix="?", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
+bot=discord.bot()
 
 @bot.event
-async def on_member_join(member):
-    serverchannel = member.server.default_channel
-    msg = "Willkommen {0} auf {1}".format(member.mention, member.server.name)
-    await client.send_message(serverchannel, msg)
+async def on_ready():
+    print('logged in as')
+    print(bot.user.name)
+    print(bot.user.id)
+    print('-----')
     
+@bot.event
+async def on_member_join(member):
+    print("Recognised that a member called" + member.name + "joined")
+    await bot.send_message(member,"Welcome to the server!")
+    print("Send message to" + member.name)
+    
+   
 @bot.command()
 async def clear(ctx, amount: int):
  admins = ["filegeiasou#0935"]
