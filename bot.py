@@ -16,8 +16,8 @@ async def on_member_join(member):
  channel = discord.utils.get(member.guild.channels, name="welcome")
  await channel.send(f"Welcome to the server{member.mention}😀")
  role = discord.utils.get(member.guild.roles, name="Member")
- await member.add_roles(role)
  await member.send("Test")
+ await member.add_roles(role)
    
 @bot.command()
 async def info(ctx):
