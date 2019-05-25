@@ -16,7 +16,7 @@ async def on_member_join(member):
  channel = discord.utils.get(member.guild.channels, name="welcome")
  await channel.send(f"Welcome to the server{member.mention}😀")
  role = discord.utils.get(member.guild.roles, name="Member")
- await member.send("Test")
+ await member.send("Welcome to the server.Write ?help to see the commands about bot.Made by filegeiasou#0935")
  await member.add_roles(role)
    
 @bot.command()
