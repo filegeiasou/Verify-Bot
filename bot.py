@@ -16,7 +16,14 @@ async def on_member_join(member):
  await channel.send(f"Welcome to the server{member.mention}😀")
  role = discord.utils.get(member.guild.roles, name="Member")
  await member.add_roles(role)
-                            
+
+   
+@bot.command()
+async def wind(ctx):
+ await ctx.author.send("Would you like to play pokemon??")
+
+
+
 @bot.command()
 async def clear(ctx, amount: int):
  admins = ["filegeiasou#0935"]
