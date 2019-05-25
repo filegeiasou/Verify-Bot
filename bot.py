@@ -20,7 +20,7 @@ async def on_member_join(member):
    
 @bot.command()
 async def info(ctx):
- await ctx.author.send("?help for see the commands")
+ await ctx.author.send("https://www.youtube.com/watch?v=6rpereSDELs")
 
 
 @bot.command()
