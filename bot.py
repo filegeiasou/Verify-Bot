@@ -13,11 +13,15 @@ async def on_ready():
  
 @bot.event
 async def on_member_join(member):
- await ctx.author.send("Would you like to play pokemon??")
+ channel = discord.utils.get(member.guild.channels, name="welcome")
+ await channel.send(f"Welcome to the server{member.mention}😀")
  role = discord.utils.get(member.guild.roles, name="Member")
  await member.add_roles(role)
- await ctx.author.send("Would you like to play pokemon??")
    
+@bot.command()
+async def info(ctx):
+ await ctx.author.send("?help for see the commands")
+
 
 @bot.command()
 async def clear(ctx, amount: int):
