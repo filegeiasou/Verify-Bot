@@ -10,16 +10,12 @@ async def on_ready():
  print(f"{bot.user.name} is ready")
  await bot.change_presence(activity=discord.Game(name="Made by filegeiasou#0935"))
                                             
+ 
 @bot.event
 async def on_member_join(member):
- channel = discord.utils.get(member.guild.channels, name="welcome")
- await channel.send(f"Welcome to the server{member.mention}😀")
+ await ctx.author.send("Would you like to play pokemon??")
  role = discord.utils.get(member.guild.roles, name="Member")
  await member.add_roles(role)
- await ctx.author.send("Would you like to play pokemon??")
-
-@bot.event
-async def on_member_join(member):
  await ctx.author.send("Would you like to play pokemon??")
    
 
