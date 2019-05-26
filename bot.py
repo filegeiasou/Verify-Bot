@@ -45,6 +45,9 @@ async def userinfo(ctx,member: discord.Member):
  embed.add_field(name"Bot?", value=member.bot)
    
  await ctx.send(embed=embed)
+
+
+
 @bot.command()
 async def info(ctx):
  await ctx.author.send("https://www.youtube.com/watch?v=6rpereSDELs")
