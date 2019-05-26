@@ -38,9 +38,7 @@ async def userinfo(ctx,member: discord.Member):
  embed.add_field(name="Joined at:", value=member.joined_at.strftime("%a , %#d %B %Y, %I:%M %p UTC"))
  
  embed.add_field(name="Top role:", value=member.top_role.mention)
-   
- embed.add_field(name"Bot?", value=member.bot)
-   
+     
  await ctx.send(embed=embed)
 
 
