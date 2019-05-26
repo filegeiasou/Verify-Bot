@@ -3,7 +3,7 @@ import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
 
-bot = commands.Bot(command_prefix="\", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
+bot = commands.Bot(command_prefix="+", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
    
 @bot.event
 async def on_ready():
