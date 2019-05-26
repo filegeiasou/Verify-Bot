@@ -23,10 +23,7 @@ async def on_member_join(member):
 @bot.event
 async def on_member_remove(member):
  channel = discord.utils.get(member.guild.channels, name="goodbye")
- await channel.send(f"Goodbye {member.mention}")
- role = discord.utils.get(member.guild.roles, name="Member")
- await member.send(f"Goodbye{member.mention}😭")
- await member.add_roles(role)
+ await member.send(f"Goodbye {member.mention}:sob:")
    
 @bot.command()
 async def info(ctx):
