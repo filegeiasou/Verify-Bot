@@ -25,7 +25,7 @@ async def on_member_remove(member):
 
 
 @bot.command()
-async def userinfo(ctx,member: discord.Member):
+async def profile(ctx,member: discord.Member):
  embed = discord.Embed(color=member.color, timestamp=ctx.message.created_at)
   
  embed.set_author(name=f"User Info - {member}")
