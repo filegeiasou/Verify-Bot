@@ -17,11 +17,37 @@ async def on_member_join(member):
  await member.send(f"Welcome {member.mention}😀")
 
 
+
 @bot.event
 async def on_member_remove(member):
  channel = discord.utils.get(member.guild.channels, name="goodbye")
  await member.send(f"Goodbye {member.mention}:sob:")
+
    
+   
+@bot.command()
+async def userinfo(ctx,member: discord.Member):
+   
+   roles = [role for role in member.roles]
+   
+   embed = discord.Embed(color=member.color, timestamp=ctx.message.created_at)
+   
+   embed.set_author(name=f"User Info - {member}")
+   embed.set_thumbnsil(url=member.avatar_url)
+   embed.set_footer(text=f"Requested by {ctx.author}", icon_url=ctx.author.avatar_url)
+   
+   embed.add_field(name="ID:", value=member.id)
+   embed.add_field(name="Guild name:", value=member.display_name)
+   
+   embed.add_field(name="Created at:", value=memebr.created_at.strftime("%a , %#d %B %Y, %I:%M %p UTC"))
+   embed.add_field(name="Joined at:", value=member.joined_at.strftime("%a , %#d %B %Y, %I:%M %p UTC"))
+   
+   embed.add_field(name=f"Roles ({len(roles)})", value=" ".join([role.mention for role in roles]))
+   embed.add_field(name="Tope role:", value=member.top_role.mention)
+   
+   embed.add_field(name"Bot?", value=member.bot)
+   
+   await ctx.send(embed=embed)
 @bot.command()
 async def info(ctx):
  await ctx.author.send("https://www.youtube.com/watch?v=6rpereSDELs")
