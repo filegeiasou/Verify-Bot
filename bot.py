@@ -70,6 +70,11 @@ async def kick(ctx, user: discord.User = None):
 @bot.command()
 async def hello(ctx):
  await ctx.channel.send("Hello.")
+
+
+@bot.command()
+async def bong(ctx):
+ await ctx.channel.send("``` alex you ae an idiot ```")
  
  
 @bot.command()
