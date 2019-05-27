@@ -74,7 +74,7 @@ async def hello(ctx):
 
 @bot.command()
 async def bong(ctx):
- await ctx.channel.send("``` alex you are an idiot ```")
+ await ctx.channel.send("```paris you are an idiot ```")
  
  
 @bot.command()
