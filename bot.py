@@ -76,8 +76,6 @@ for word in bad_words:
         print("A bad word was said")
         await message.channel.purge(limit=1)
 
-if message.content == "!help":
-    embed = discord.Embed(title="Here is a Verify Bot", description="Some useful commands")     
 
 @bot.command()
 async def hello(ctx):
