@@ -69,13 +69,6 @@ async def kick(ctx, user: discord.User = None):
 
 
 
-bad_words = ["gay","idiot"]
-
-for word in bad_words:
-    if message.content.count (word) > 0:
-        print("A bad word was said")
-        await message.channel.purge(limit=1)
-
 
 @bot.command()
 async def hello(ctx):
