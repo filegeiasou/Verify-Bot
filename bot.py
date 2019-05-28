@@ -68,16 +68,6 @@ async def kick(ctx, user: discord.User = None):
         await ctx.channel.send("You do not have permission to use this command.")
 
 
-@bot.event
-async def on_member_update(before , after):
-    n = after.nick
-    if n:
-        if n.lower().count ("filegeiasou") > 0 :
-            last = before.nick
-            if last:
-                await after.edit(nick=last)
-            else:
-                await after.edit(nick="NO STOP THAT")
 
 bad_words = ["gay","idiot"]
 
