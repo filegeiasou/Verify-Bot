@@ -1,4 +1,4 @@
-﻿import discord
+import discord
 import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -46,8 +46,6 @@ async def profile(ctx, member: discord.Member):
 async def info(ctx):
     await ctx.author.send("https://www.youtube.com/watch?v=6rpereSDELs")
 
-
-
 @bot.command()
 async def clear(ctx, amount: int):
     admins = ["filegeiasou#0935"]
@@ -56,7 +54,6 @@ async def clear(ctx, amount: int):
         await ctx.channel.send(f"Cleared {amount} messages.")
     else:
         await ctx.channel.send("You do not have permission to use this command.")
-
 
 @bot.command()
 async def kick(ctx, user: discord.User = None):
@@ -67,13 +64,9 @@ async def kick(ctx, user: discord.User = None):
     else:
         await ctx.channel.send("You do not have permission to use this command.")
 
-
-
-
 @bot.command()
 async def hello(ctx):
     await ctx.channel.send("Hello.")
-
 
 @bot.command()
 async def wlu(ctx):
@@ -88,7 +81,6 @@ async def wlu(ctx):
 
     await ctx.channel.send(embed=testembed)
 
-
 @bot.command()
 async def verify(ctx):
     testembed = discord.Embed(
@@ -101,7 +93,6 @@ async def verify(ctx):
     testembed.set_footer(text="Wlu team")
 
     await ctx.channel.send(embed=testembed)
-
 
 @bot.command()
 async def site(ctx):
