@@ -1,11 +1,5 @@
 ﻿import discord
 import asyncio
-import aiohttp
-import re
-from datetime import timedelta
-import traceback
-import os
-from random import choice, randint
 from discord.ext import commands
 from discord.ext.commands import Bot
 
@@ -53,48 +47,11 @@ async def info(ctx):
     await ctx.author.send("https://www.youtube.com/watch?v=6rpereSDELs")
 
 
-
-
-@bot.command(pass_context=True, hidden=True)
-async def setname(ctx, *, name):
-    if ctx.message.author.id not in owner:
-        return
-    name = name.strip()
-    if name != "":
-        try:
-            await bot.edit_profile(username=name)
-        except:
-            await bot.say("Failed to change name")
-        else:
-            await bot.say("Successfuly changed name to {}".format(name))
-    else:
-        await bot.send_cmd_help(ctx)
-
-
-
-@bot.command(pass_context=True, no_pm=True)
-async def avatar(ctx, member: discord.Member):
-    """User Avatar"""
-    await bot.reply("{}".format(member.avatar_url))
-
-
-
-@bot.command(pass_context=True, hidden=True)
-async def setavatar(ctx, url):
-	if ctx.message.author.id not in owner:
-		return
-	async with aiohttp.ClientSession() as session:
-		async with session.get(url) as r:
-			data = await r.read()
-	await bot.edit_profile(avatar=data)
-	await bot.say("I changed my icon")
-
-
 @bot.command()
-async def invite():
-  	"""Bot Invite"""
-  	await bot.say("\U0001f44d")
-  	await bot.whisper("Add me with this link {}".format(discord.utils.oauth_url(bot.user.id)))
+async def rename(ctx, name):
+    await bot.user.edit(username=name)
+
+
 
 
 @bot.command()
