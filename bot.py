@@ -1,7 +1,10 @@
-﻿import discord
+﻿import discord, logging, json
 import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
+from profanity import profanity
+from tinydb import TinyDB, Query
+from tinydb.operations import delete,increment
 
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
