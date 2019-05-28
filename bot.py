@@ -1,5 +1,11 @@
 ﻿import discord
 import asyncio
+import aiohttp
+import re
+from datetime import timedelta
+import traceback
+import os
+from random import choice, randint
 from discord.ext import commands
 from discord.ext.commands import Bot
 
