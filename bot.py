@@ -1,4 +1,4 @@
-﻿﻿import discord
+import discord
 import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -68,7 +68,6 @@ async def kick(ctx, user: discord.User = None):
         await ctx.channel.send("You do not have permission to use this command.")
 
 
- 
 
 @bot.command()
 async def hello(ctx):
