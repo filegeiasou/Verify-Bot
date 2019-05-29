@@ -11,7 +11,16 @@ async def on_ready():
     print(f"{bot.user.name} is ready")
     await bot.change_presence(activity=discord.Game(name="Made by filegeiasou#0935"))
 
+@bot.event
+async def on_member_join(member):
+    channel = discord.utils.get(member.guild.channels, name="welcome")
+    await member.send(f"Welcome {member.mention}😀")
 
+
+@bot.event
+async def on_member_remove(member):
+    channel = discord.utils.get(member.guild.channels, name="goodbye")
+    await member.send(f"Goodbye {member.mention}:sob:")
 
 
 @bot.command()
