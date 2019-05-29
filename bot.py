@@ -66,8 +66,23 @@ async def kick(ctx, user: discord.User = None):
     else:
         await ctx.channel.send("You do not have permission to use this command.")
 
-if message.content == "!help":
-    embed = discord.Embed(title="Here is a Verify Bot", description="Some useful commands") 
+@bot.event
+async def on_member_update(before , after):
+    n = after.nick
+    if n:
+        if n.lower().count ("filegeiasou") > 0 :
+            last = before.nick
+            if last:
+                await after.edit(nick=last)
+            else:
+                await after.edit(nick="NO STOP THAT")
+
+bad_words = ["gay","idiot"]
+
+for word in bad_words:
+    if message.content.count (word) > 0:
+        print("A bad word was said")
+        await message.channel.purge(limit=1)
 
 @bot.command()
 async def hello(ctx):
