@@ -24,7 +24,17 @@ async def on_member_remove(member):
 
 @bot.command()
 async def help():
-    pass
+    testembed = discord.Embed(
+        title="Verify Bot",
+        description="```!help !profile !info !clear !kick !hello !wly !verify !site ``` ,
+        colour=discord.Colour.orange()
+    )
+
+    testembed.set_author(name="Verifynow")
+    testembed.set_footer(text="Wlu team")
+
+    await ctx.channel.send(embed=testembed)
+
 
 
 
