@@ -50,7 +50,20 @@ async def profile(ctx, member: discord.Member):
 async def info(ctx):
     await ctx.author.send("https://www.youtube.com/watch?v=6rpereSDELs")
 
+@bot.command()
+async def avatar(ctx, user: discord.User = None):
+ embed = discord.Embed(
+  title = "title",
+  description = "desc",
+  colour = discord.Colour.red()
+ )
 
+ pfp = user.avatar_url
+
+ embed.set_footer(text="devo.xyz")
+ embed.set_image(url=pfp)
+
+ await ctx.channel.send(embed=embed)
 
 @bot.command()
 async def clear(ctx, amount: int):
