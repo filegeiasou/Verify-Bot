@@ -26,7 +26,7 @@ async def on_member_remove(member):
 async def help():
     testembed = discord.Embed(
         title="Verify Bot",
-        description="```!help !profile !info !clear !kick !hello !wly !verify !site ``` ,
+        description="```!help !profile !info !clear !kick !hello !wly !verify !site ```,
         colour=discord.Colour.orange()
     )
 
