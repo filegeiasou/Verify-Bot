@@ -106,4 +106,4 @@ async def site(ctx):
     await ctx.channel.send(embed=testembed)
 
 
-bot.run("HCjt0_N7xzXm0bmdJiaYMmMfIUPG1uww")
+bot.run("6VmW4S9Hbdg5CJZOfei883zPvVEhdmxc")
