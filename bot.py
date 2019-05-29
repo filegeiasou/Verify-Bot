@@ -27,7 +27,7 @@ async def help(ctx):
     await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear```") 
 
 
-if message.content.startswith('>avatar'):
+if message.content.startswith('!avatar'):
     if len(message.mentions) > 0:
         images = ''
         for user in message.mentions:
