@@ -55,14 +55,13 @@ async def avatar(ctx, user: discord.User = None):
  embed = discord.Embed(
   title = "Verify Bot",
   description = "Avatar",
-  colour = discord.Colour.black()
+  colour = discord.Colour.dark_blue()
  )
 
  pfp = user.avatar_url
 
  embed.set_footer(text="Made by filegeiasou#0935")
  embed.set_image(url=pfp)
-
  await ctx.channel.send(embed=embed)
 
 @bot.command()
