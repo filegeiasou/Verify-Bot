@@ -24,7 +24,7 @@ async def on_member_remove(member):
 
 @bot.command()
 async def help(ctx):
-    await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear```") 
+    await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar```") 
 
 
 
