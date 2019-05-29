@@ -66,7 +66,8 @@ async def kick(ctx, user: discord.User = None):
     else:
         await ctx.channel.send("You do not have permission to use this command.")
 
-
+if message.content == "!help":
+    embed = discord.Embed(title="Here is a Verify Bot", description="Some useful commands") 
 
 @bot.command()
 async def hello(ctx):
