@@ -5,7 +5,7 @@ from discord.ext.commands import Bot
 
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
-
+bot.remove_command("help")
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} is ready")
@@ -21,6 +21,11 @@ async def on_member_join(member):
 async def on_member_remove(member):
     channel = discord.utils.get(member.guild.channels, name="goodbye")
     await member.send(f"Goodbye {member.mention}:sob:")
+
+@bot.command()
+async def help():
+    pass
+
 
 
 @bot.command()
