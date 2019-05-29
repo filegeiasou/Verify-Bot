@@ -23,17 +23,9 @@ async def on_member_remove(member):
     await member.send(f"Goodbye {member.mention}:sob:")
 
 @bot.command()
-async def help():
-    testembed = discord.Embed(
-        title="Verify Bot",
-        description="```!help !profile !info !clear !kick !hello !wly !verify !site ```,
-        colour=discord.Colour.orange()
-    )
+async def help(ctx):
+    await ctx.channel.send("```!help !profile !info !hello !verify !wlu !site !kick !clear```") 
 
-    testembed.set_author(name="Verifynow")
-    testembed.set_footer(text="Wlu team")
-
-    await ctx.channel.send(embed=testembed)
 
 
 
