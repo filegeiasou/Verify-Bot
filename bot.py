@@ -27,15 +27,6 @@ async def help(ctx):
     await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear```") 
 
 
-if message.content.startswith('!avatar'):
-    if len(message.mentions) > 0:
-        images = ''
-        for user in message.mentions:
-                images += str(user.avatar_url) + str('\n')
-        await message.channel.send(images)
-    else:
-        await message.channel.send(message.author.avatar_url)
-
 
 @bot.command()
 async def profile(ctx, member: discord.Member):
