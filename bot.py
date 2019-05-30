@@ -27,7 +27,7 @@ async def on_member_remove(member):
 
 @bot.command()
 async def help(ctx):
-    await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar```") 
+    await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar !datetime```") 
 
 
 @bot.command()
@@ -143,59 +143,3 @@ async def site(ctx):
 bot.run("NTc5MzU1NjEwMjY5NzQ1MTgz.XO4fnw.2ogeadLZ7bsQqO9JL-Sc1MPhGJM")
 
 
-@bot.command(pass_context=True)
-async def hi(ctx):
-    await ctx.channel.send("Hello, %s!" % ctx.message.author.mention)
-
-from datetime import datetime
-
-date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
-@bot.event
-async def on_message(message):
-if message.author.bot == False:
-  print("[" + (colored("{}".format(date), 'white')) + "][" + (colored("{}".format(message.server), 'blue')) + " - " + (colored("{}".format(message.channel), 'magenta')) + "] " + (colored("{}".format(message.author), 'cyan') + ": " + message.content))
-
-@bot.command()
-async def wlu(ctx):
-    testembed = discord.Embed(
-        title="What Lies Underneath",
-        description="What lies underneath server : https://discord.gg/cwerZuM. What lies underneath site : https://whatliesunderneath.cf/.",
-        colour=discord.Colour.orange()
-    )
-
-    testembed.set_author(name="Verifynow")
-    testembed.set_footer(text="Wlu team")
-
-    await ctx.channel.send(embed=testembed)
-
-
-@bot.command()
-async def verify(ctx):
-    testembed = discord.Embed(
-        title="Verify bot",
-        description="Verify bot and site here : http://verifynow.cf/.",
-        colour=discord.Colour.blue()
-    )
-
-    testembed.set_author(name="Verifynow")
-    testembed.set_footer(text="Wlu team")
-
-    await ctx.channel.send(embed=testembed)
-
-
-@bot.command()
-async def site(ctx):
-    testembed = discord.Embed(
-        title="Verify bot",
-        description="Everyone who wants to help with bot send email here : http://verifynow.cf/.",
-        colour=discord.Colour.purple()
-    )
-
-    testembed.set_author(name="Verifynow")
-    testembed.set_footer(text="Wlu team")
-
-    await ctx.channel.send(embed=testembed)
-
-
-bot.run("NTc5MzU1NjEwMjY5NzQ1MTgz.XO4fnw.2ogeadLZ7bsQqO9JL-Sc1MPhGJM")
