@@ -2,10 +2,15 @@ import discord
 import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
+from datetime import datetime
+
+date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
 bot.remove_command("help")
+
+
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} is ready")
@@ -27,6 +32,19 @@ async def help(ctx):
     await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar```") 
 
 
+@bot.command()
+async def avatar(ctx, user: discord.User = None):
+ embed = discord.Embed(
+  title = "Verify Bot",
+  description = "Avatar",
+  colour = discord.Colour.dark_blue()
+ )
+
+ pfp = user.avatar_url
+
+ embed.set_footer(text="Made by filegeiasou#0935")
+ embed.set_image(url=pfp)
+ await ctx.channel.send(embed=embed)
 
 @bot.command()
 async def profile(ctx, member: discord.Member):
@@ -50,19 +68,7 @@ async def profile(ctx, member: discord.Member):
 async def info(ctx):
     await ctx.author.send("https://www.youtube.com/watch?v=6rpereSDELs")
 
-@bot.command()
-async def avatar(ctx, user: discord.User = None):
- embed = discord.Embed(
-  title = "Verify Bot",
-  description = "Avatar",
-  colour = discord.Colour.dark_blue()
- )
 
- pfp = user.avatar_url
-
- embed.set_footer(text="Made by filegeiasou#0935")
- embed.set_image(url=pfp)
- await ctx.channel.send(embed=embed)
 
 @bot.command()
 async def clear(ctx, amount: int):
@@ -84,10 +90,18 @@ async def kick(ctx, user: discord.User = None):
         await ctx.channel.send("You do not have permission to use this command.")
 
 
-@bot.command()
-async def hello(ctx):
-    await ctx.channel.send("Hello.")
+@bot.command(pass_context=True)
+async def hi(ctx):
+    await ctx.channel.send("Hello, %s!" % ctx.message.author.mention)
 
+from datetime import datetime
+
+date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+@bot.event
+async def on_message(message):
+if message.author.bot == False:
+  print("[" + (colored("{}".format(date), 'white')) + "][" + (colored("{}".format(message.server), 'blue')) + " - " + (colored("{}".format(message.channel), 'magenta')) + "] " + (colored("{}".format(message.author), 'cyan') + ": " + message.content))
 
 @bot.command()
 async def wlu(ctx):
