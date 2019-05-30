@@ -2,9 +2,7 @@ import discord
 import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
-from datetime import datetime
 
-date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
@@ -88,6 +86,61 @@ async def kick(ctx, user: discord.User = None):
         await ctx.channel.send(f"I kicked {user}!")
     else:
         await ctx.channel.send("You do not have permission to use this command.")
+
+
+@bot.command(pass_context=True)
+async def hi(ctx):
+    await ctx.channel.send("Hello, %s!" % ctx.message.author.mention)
+
+
+@bot.command()
+async def datetime(ctx):
+    await ctx.channel.send(f"This message was sent on: {ctx.message.created_at}")
+
+
+@bot.command()
+async def wlu(ctx):
+    testembed = discord.Embed(
+        title="What Lies Underneath",
+        description="What lies underneath server : https://discord.gg/cwerZuM. What lies underneath site : https://whatliesunderneath.cf/.",
+        colour=discord.Colour.orange()
+    )
+
+    testembed.set_author(name="Verifynow")
+    testembed.set_footer(text="Wlu team")
+
+    await ctx.channel.send(embed=testembed)
+
+
+@bot.command()
+async def verify(ctx):
+    testembed = discord.Embed(
+        title="Verify bot",
+        description="Verify bot and site here : http://verifynow.cf/.",
+        colour=discord.Colour.blue()
+    )
+
+    testembed.set_author(name="Verifynow")
+    testembed.set_footer(text="Wlu team")
+
+    await ctx.channel.send(embed=testembed)
+
+
+@bot.command()
+async def site(ctx):
+    testembed = discord.Embed(
+        title="Verify bot",
+        description="Everyone who wants to help with bot send email here : http://verifynow.cf/.",
+        colour=discord.Colour.purple()
+    )
+
+    testembed.set_author(name="Verifynow")
+    testembed.set_footer(text="Wlu team")
+
+    await ctx.channel.send(embed=testembed)
+
+
+bot.run("NTc5MzU1NjEwMjY5NzQ1MTgz.XO4fnw.2ogeadLZ7bsQqO9JL-Sc1MPhGJM")
 
 
 @bot.command(pass_context=True)
