@@ -6,8 +6,6 @@ from discord.ext.commands import Bot
 
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
-bot.remove_command("help")
-
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} is ready")
@@ -26,10 +24,7 @@ async def on_member_remove(member):
     channel = discord.utils.get(member.guild.channels, name="goodbye")
     await member.send(f"Goodbye {member.mention}:sob:")
     
-
-@bot.command()
-async def help(ctx):
-    await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar```") 
+ 
 
 
 @bot.command()
@@ -121,7 +116,7 @@ async def wlu(ctx):
 async def alexsss(ctx):
     alexsssembed = discord.Embed(
         title = "AlexSSS",
-        description = "AlexSSS makes Devo, a featureful Discord bot. Add it at https://devo.xyz/! He also makes i.devo, a fluent file host that just works. Check it out at http://i.devo.xyz/. Lastly, he sometimes streams. Watch them at https:/bit.ly/alexsss/!",
+        description = "AlexSSS makes Devo, a featureful Discord bot. Add it at https://devo.xyz/! He also makes i.devo, a fluent file host that just works. Check it out httpat http://i.devo.xyz/. Lastly, he sometimes streams. Watch them at https://bit.ly/alexsss !",
         colour = discord.Colour.green()
     )
 
