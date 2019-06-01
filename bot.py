@@ -117,16 +117,16 @@ async def wlu(ctx):
     testembed.set_footer(text="Wlu team")
 
     await ctx.channel.send(embed=testembed)
-
+      
 @bot.command()
 async def alexsss(ctx):
-    alexsssembed = discord.Embed(
-        title = "AlexSSS",
-        description = "AlexSSS makes Devo, a featureful Discord bot. Add it at https://devo.xyz/! He also makes i.devo, a fluent file host that just works. Check it out at http://i.devo.xyz/. Lastly, he sometimes streams. Watch them at https:/bit.ly/alexsss/!",
-        colour = discord.Colour.green()
-    )
+ alexsssembed = discord.Embed(
+  title = "AlexSSS",
+  description = "AlexSSS makes Devo, a featureful Discord bot. Add it at https://devo.xyz/! He also makes i.devo, a fluent file host that just works. Check it out at http://i.devo.xyz/. Lastly, he sometimes streams. Watch them at https:/bit.ly/alexsss/!",
+  colour = discord.Colour.green()
+ )
 
-    await ctx.channel.send(embed=alexsssembed)
+ await ctx.channel.send(embed=alexsssembed)
 
 
 @bot.command()
