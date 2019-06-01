@@ -6,7 +6,6 @@ from discord.ext.commands import Bot
 
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
-bot.remove_command("help")
 
 @bot.event
 async def on_ready():
@@ -28,11 +27,6 @@ async def on_member_remove(member):
 async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name="Member")
     await member.add_roles(role)
-
-
-@bot.command()
-async def help(ctx):
-    await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar```") 
 
 
 @bot.command()
