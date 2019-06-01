@@ -29,6 +29,10 @@ async def on_member_remove(member):
 async def help(ctx):
     await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar !datetime```") 
 
+@bot.event
+async def on_member_join(member):
+    role = discord.utils.get(member.servet.roles, name="Verify Bot")
+    await bot.add_roles(member , role)
 
 @bot.command()
 async def avatar(ctx, user: discord.User = None):
