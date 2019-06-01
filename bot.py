@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import time
 from discord.ext import commands
 from discord.ext.commands import Bot
 
@@ -7,7 +8,6 @@ from discord.ext.commands import Bot
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
 bot.remove_command("help")
-
 
 @bot.event
 async def on_ready():
@@ -25,14 +25,16 @@ async def on_member_remove(member):
     channel = discord.utils.get(member.guild.channels, name="goodbye")
     await member.send(f"Goodbye {member.mention}:sob:")
 
-@bot.command()
-async def help(ctx):
-    await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar !datetime```") 
-
 @bot.event
 async def on_member_join(member):
-    role = discord.utils.get(member.servet.roles, name="Verify Bot")
-    await bot.add_roles(member , role)
+    role = discord.utils.get(member.server.roles, name="Member")
+    await member.add_roles(role)
+
+
+@bot.command()
+async def help(ctx):
+    await ctx.channel.send("Commands of bot :```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar```") 
+
 
 @bot.command()
 async def avatar(ctx, user: discord.User = None):
@@ -65,10 +67,14 @@ async def profile(ctx, member: discord.Member):
 
     await ctx.send(embed=embed)
 
+@bot.command()
+async def ping(ctx):
+    await ctx.channel.send("Pong, %s!" % ctx.message.author.mention)
+
 
 @bot.command()
 async def info(ctx):
-    await ctx.author.send("https://www.youtube.com/watch?v=6rpereSDELs")
+    await ctx.author.send("Do you like to help me with command send me email here:filegeiasou@gmail.com.Commands of bot ```!help !profile !info !hello !verify !wlu !site !kick !clear !avatar !datetime```")
 
 
 
