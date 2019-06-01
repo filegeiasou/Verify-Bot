@@ -6,7 +6,6 @@ from discord.ext.commands import Bot
 
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
-bot.remove_command("")
 
 @bot.event
 async def on_ready():
