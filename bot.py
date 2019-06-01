@@ -25,7 +25,7 @@ async def on_member_remove(member):
 
 @bot.event
 async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, name="Member")
+    role = discord.utils.get(member.guild.roles, name="Member")
     await member.add_roles(role)
 
 
