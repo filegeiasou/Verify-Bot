@@ -132,7 +132,7 @@ async def help(ctx):
     embed.add_field(name="!datetime", value="You can see the datetime ", inline=False)
     embed.add_field(name="!verify", value="You can verify your account", inline=False)
 
-    await ctx.author.send(embed=embed)
+    await ctx.channel.send("I sent you a dm!")
 
 
 
