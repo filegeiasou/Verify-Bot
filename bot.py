@@ -5,7 +5,7 @@ from discord.ext import commands, tasks
 from discord.ext.commands import Bot
 from itertools import cycle
 
-status = cycle(["Made by filegeiasou#0935", "write !help"])
+status = cycle([ "Made by filegeiasou#0935", "write !help" ])
 bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
 bot.remove_command('help')
@@ -22,7 +22,7 @@ async def on_member_join(member):
     role = discord.utils.get(member.guild.roles, name="Member")
     await member.add_roles(role)
 
-@tasks.loop(seconds=9)
+@tasks.loop(seconds=8)
 async def change_status():
     await bot.change_presence(activity=discord.Game(next(status)))
 
