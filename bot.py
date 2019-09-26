@@ -28,12 +28,6 @@ async def change_status():
 
 
 
-
-@bot.event
-async def on_member_remove(member):
-    channel = discord.utils.get(member.guild.channels, name="welcome")
-    await member.send(f"Goodbye {member.mention}:sob:")
-
 @bot.command()
 async def avatar(ctx, user: discord.User = None):
  embed = discord.Embed(
