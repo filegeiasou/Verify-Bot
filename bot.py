@@ -19,7 +19,7 @@ async def on_ready():
 async def on_member_join(member):
     channel = discord.utils.get(member.guild.channels, name="welcome")
     await member.send(f"Welcome {member.mention}😀")
-    role = discord.utils.get(member.guild.roles, name="Oberdeckoffizier")
+    role = discord.utils.get(member.guild.roles, name="Member")
     await member.add_roles(role)
 
 @tasks.loop(seconds=8)
@@ -147,28 +147,9 @@ async def datetime(ctx):
     await ctx.channel.send(f"This message was sent on: {ctx.message.created_at}")
 
 
-@bot.command()
-async def wlu(ctx):
-    testembed = discord.Embed(
-        title="What Lies Underneath",
-        description="What lies underneath server : https://discord.gg/cwerZuM. What lies underneath site : https://whatliesunderneath.cf/.",
-        colour=discord.Colour.orange()
-    )
 
-    testembed.set_author(name="Verifynow")
-    testembed.set_footer(text="Wlu team")
 
-    await ctx.channel.send(embed=testembed)
 
-@bot.command()
-async def alexsss(ctx):
-    alexsssembed = discord.Embed(
-        title = "AlexSSS",
-        description = "AlexSSS makes Devo, a featureful Discord bot. Add it at https://devo.xyz/ ! He also makes i.devo, a fluent file host that just works. Check it out at http://i.devo.xyz/. Lastly, he sometimes streams. Watch them at https:/bit.ly/alexsss/ !",
-        colour = discord.Colour.green()
-    )
-
-    await ctx.channel.send(embed=alexsssembed)
 
 @bot.command()
 async def verify(ctx):
@@ -184,18 +165,6 @@ async def verify(ctx):
     await ctx.channel.send(embed=testembed)
 
 
-@bot.command()
-async def site(ctx):
-    testembed = discord.Embed(
-        title="Verify bot",
-        description="Everyone who wants to help with bot send email here : http://verifynow.cf/.",
-        colour=discord.Colour.purple()
-    )
-
-    testembed.set_author(name="Verifynow")
-    testembed.set_footer(text="Verify team")
-
-    await ctx.channel.send(embed=testembed)
 
 
 bot.run("NTc5MzU1NjEwMjY5NzQ1MTgz.XWPNlA.FS7raFVqBcp_ie6HmX0-LRnSWbg")
