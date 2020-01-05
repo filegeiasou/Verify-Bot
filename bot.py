@@ -5,8 +5,8 @@ from discord.ext import commands, tasks
 from discord.ext.commands import Bot
 from itertools import cycle
 
-status = cycle([ "Made by filegeiasou", "write !help" ])
-bot = commands.Bot(command_prefix="!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
+status = cycle([ "Made by filegeiasou", "write vhelp" ])
+bot = commands.Bot(command_prefix="v", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
 bot.remove_command('help')
 @bot.event
