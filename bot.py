@@ -59,9 +59,7 @@ async def profile(ctx, member: discord.Member):
 
     await ctx.send(embed=embed)
 
-@bot.command()
-async def ping(ctx):
-    await ctx.channel.send("Pong, %s!" % ctx.message.author.mention)
+
 
 
 @bot.command()
@@ -90,9 +88,7 @@ async def kick(ctx, user: discord.User = None):
         await ctx.channel.send("You do not have permission to use this command.")
 
 
-@bot.command(pass_context=True)
-async def hi(ctx):
-    await ctx.channel.send("Hello, %s!" % ctx.message.author.mention)
+
 
 
 @bot.command(pass_context=True)
@@ -121,16 +117,11 @@ async def help(ctx):
     embed.set_author(name="Verify Bot - Help and Documentation")
     embed.add_field(name="!help", value="Your using it right now", inline=False)
     embed.add_field(name="!avatar", value="You can see your avatar", inline=False)
-    embed.add_field(name="!alexsss", value="Who is Alexsss", inline=False)
-    embed.add_field(name="!wlu", value="Wlu game ", inline=False)
-    embed.add_field(name="!site", value="The website of bot", inline=False)
     embed.add_field(name="!profile", value="You can see your profile", inline=False)
     embed.add_field(name="!magic8ball", value="Random things with magic 8 ball", inline=False)
-    embed.add_field(name="!hi", value="Hello", inline=False)
     embed.add_field(name="!kick", value="You can kick members", inline=False)
     embed.add_field(name="!clear", value="You can clear message", inline=False)
     embed.add_field(name="!info", value="You can take info about bot", inline=False)
-    embed.add_field(name="!ping", value="Pong", inline=False)
     embed.add_field(name="!datetime", value="You can see the datetime ", inline=False)
     embed.add_field(name="!verify", value="You can verify your account", inline=False)
 
