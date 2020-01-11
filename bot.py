@@ -5,8 +5,8 @@ from discord.ext import commands, tasks
 from discord.ext.commands import Bot
 from itertools import cycle
 
-status = cycle([ "Made by filegeiasou", "write vhelp" ])
-bot = commands.Bot(command_prefix="v", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
+status = cycle([ "Made by filegeiasou", "write a!help" ])
+bot = commands.Bot(command_prefix="a!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
 bot.remove_command('help')
 @bot.event
@@ -114,16 +114,15 @@ async def help(ctx):
     embed = discord.Embed(
         colour = discord.Color.purple()
     )
-    embed.set_author(name="Verify Bot - Help and Documentation")
-    embed.add_field(name="vhelp", value="Your using it right now", inline=False)
-    embed.add_field(name="vavatar", value="You can see your avatar", inline=False)
-    embed.add_field(name="vprofile", value="You can see your profile", inline=False)
-    embed.add_field(name="vmagic8ball", value="Random things with magic 8 ball", inline=False)
-    embed.add_field(name="vkick", value="You can kick members", inline=False)
-    embed.add_field(name="vclear", value="You can clear message", inline=False)
-    embed.add_field(name="vinfo", value="You can take info about bot", inline=False)
-    embed.add_field(name="vdatetime", value="You can see the datetime ", inline=False)
-    embed.add_field(name="vverify", value="You can verify your account", inline=False)
+    embed.set_author(name="Addiction Bot - Help and Documentation")
+    embed.add_field(name="a!help", value="Your using it right now", inline=False)
+    embed.add_field(name="a!avatar", value="You can see your avatar", inline=False)
+    embed.add_field(name="a!profile", value="You can see your profile", inline=False)
+    embed.add_field(name="a!magic8ball", value="Random things with magic 8 ball", inline=False)
+    embed.add_field(name="a!kick", value="You can kick members", inline=False)
+    embed.add_field(name="a!clear", value="You can clear message", inline=False)
+    embed.add_field(name="a!info", value="You can take info about bot", inline=False)
+    embed.add_field(name="a!datetime", value="You can see the datetime ", inline=False)
 
     await ctx.channel.send("I sent you a dm!")
     await author.send(embed=embed)
@@ -142,18 +141,7 @@ async def datetime(ctx):
 
 
 
-@bot.command()
-async def verify(ctx):
-    testembed = discord.Embed(
-        title="Verify bot",
-        description="Verify bot and site here : http://verifynow.cf/.",
-        colour=discord.Colour.blue()
-    )
 
-    testembed.set_author(name="Verifynow")
-    testembed.set_footer(text="Verify team")
-
-    await ctx.channel.send(embed=testembed)
 
 
 
