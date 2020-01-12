@@ -123,6 +123,7 @@ async def help(ctx):
     embed.add_field(name="a!clear", value="You can clear message", inline=False)
     embed.add_field(name="a!info", value="You can take info about bot", inline=False)
     embed.add_field(name="a!datetime", value="You can see the datetime ", inline=False)
+    embed.add_field(name="a!help2", value="You can see how can you help me ", inline=False)
 
     await ctx.channel.send("I sent you a dm!")
     await author.send(embed=embed)
@@ -137,7 +138,9 @@ async def datetime(ctx):
     await ctx.channel.send(f"This message was sent on: {ctx.message.created_at}")
 
 
-
+@bot.command()
+async def help2(ctx):
+    await ctx.author.send("Do you like to help me with bots. Send me email here: filegeiasou@gmail.com.")
 
 
 
