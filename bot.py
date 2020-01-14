@@ -77,16 +77,32 @@ async def clear(ctx, amount=10):
 
 
 @bot.command()
-async def kick(ctx, user: discord.User = None):
-    admins = ["filegeiasou#0935"]
-    if str(ctx.message.author) in admins:
-        await ctx.guild.kick(user)
-        await ctx.channel.send(f"I kicked {user}!")
-    else:
-        await ctx.channel.send("You do not have permission to use this command.")
+@commands.has_permissions(kick_members=True)
+async def kick(ctx, member: discord.Member, *, reason=None):
+    await member.kick(reason=reason)
+    
+    
+    
+@bot.command()
+@commands.has_permissions(ban_members=True)
+async def ban(ctx, member: discord.Member, *, reason=None):
+    await member.ban(reason=reason)
+    await ctx.send(f'Banned{member.mention}')
 
 
-
+@bot.command()
+@commands.has_permissions(ban_members=True)
+async def unban(ctx, *, member):
+    banned_users = await ctx.guild.bans()
+    member_name, member_discriminator = member.split('#')
+    
+    for ban_entry in banned_users:
+        user = ban_entry.user
+        
+        if(user.name, user.discriminator) == (member_name, member_discriminator):
+            await ctx.guild.unban(user)
+            await ctx.send(f'Banned{member.mention}')
+            return
 
 
 @bot.command(pass_context=True)
@@ -121,7 +137,8 @@ async def help(ctx):
     embed.add_field(name="a!clear", value="You can clear message", inline=False)
     embed.add_field(name="a!info", value="You can take info about bot", inline=False)
     embed.add_field(name="a!datetime", value="You can see the datetime ", inline=False)
-    embed.add_field(name="a!help2", value="You can see how can you help me ", inline=False)
+    embed.add_field(name="a!ban", value="You can ban ", inline=False)
+    embed.add_field(name="a!unban", value="You can unban ", inline=False)
 
     await ctx.channel.send("I sent you a dm!")
     await author.send(embed=embed)
