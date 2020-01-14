@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import random
+import os
 from discord.ext import commands, tasks
 from discord.ext.commands import Bot
 from itertools import cycle
@@ -69,13 +70,10 @@ async def info(ctx):
 
 
 @bot.command()
-async def clear(ctx, amount: int):
-    admins = ["filegeiasou#0935"]
-    if str(ctx.message.author) in admins:
+@commands.has_permissions(manage_messages=True)
+async def clear(ctx, amount=10):
         await ctx.channel.purge(limit=amount)
-        await ctx.channel.send(f"Cleared {amount} messages.")
-    else:
-        await ctx.channel.send("You do not have permission to use this command.")
+
 
 
 @bot.command()
@@ -138,9 +136,9 @@ async def datetime(ctx):
     await ctx.channel.send(f"This message was sent on: {ctx.message.created_at}")
 
 
-@bot.command()
-async def help2(ctx):
-    await ctx.author.send("Do you like to help me with bots. Send me email here: filegeiasou@gmail.com.")
+
+        
+    
 
 
 
