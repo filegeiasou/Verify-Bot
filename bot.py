@@ -156,7 +156,7 @@ async def datetime(ctx):
 for cog in os.listdir(".\\cogs):
     if cog.endswith(".py"):
         try:
-            cog = f"cogs.{replace('.py', '')}"
+            cog = f"cogs.{cog.replace('.py', '')}"
             bot.load_extension(cog)
         except Exception as e:
             print(f"{cog} can not be loaded:")
