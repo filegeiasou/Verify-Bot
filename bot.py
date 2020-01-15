@@ -2,6 +2,7 @@ import discord
 import asyncio
 import random
 import os
+import sys
 from discord.ext import commands, tasks
 from discord.ext.commands import Bot
 from itertools import cycle
@@ -152,19 +153,15 @@ async def help(ctx):
 async def datetime(ctx):
     await ctx.channel.send(f"This message was sent on: {ctx.message.created_at}")
 
+initial_extensions = ['cogs.levels']
 
-for cog in os.listdir(".//cogs):
-    if cog.endswith(".py"):
+if __name__ == '__main__':
+    for extension in initial_extension:
         try:
-            cog = f"cogs.{cog.replace('.py', '')}"
-
-            bot.load_extension(cog)
-
+            bot.load_extension(extension)
         except Exception as e:
-
-            print(f"{cog} can not be loaded:")
-
-            raise e
+            print(f'Failed to load extension {extension}', file=sys.stderr)
+            traceback.print_exc()
                      
     
     
