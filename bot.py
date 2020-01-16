@@ -153,15 +153,7 @@ async def help(ctx):
 async def datetime(ctx):
     await ctx.channel.send(f"This message was sent on: {ctx.message.created_at}")
 
-initial_extensions = ['cogs.levels']
 
-if __name__ == '__main__':
-    for extension in initial_extension:
-        try:
-            bot.load_extension(extension)
-        except Exception as e:
-            print(f'Failed to load extension {extension}', file=sys.stderr)
-            traceback.print_exc()
                      
     
     
