@@ -141,6 +141,7 @@ async def help(ctx):
     embed.add_field(name="a!datetime", value="You can see the datetime ", inline=False)
     embed.add_field(name="a!ban", value="You can ban ", inline=False)
     embed.add_field(name="a!unban", value="You can unban ", inline=False)
+    embed.add_field(name="a!level", value="Is not ready yet ", inline=False)
 
     await ctx.channel.send("I sent you a dm!")
     await author.send(embed=embed)
@@ -158,8 +159,23 @@ async def datetime(ctx):
                      
     
     
+    
+@bot.command()
+async def level(self, ctx, member: discord.Member = None):
+	member = ctx.author if not member else member
+	member_id = str(member.id)
 
+	if not member_id in self.users:
+		await ctx.send("Member doesn't a level")
+	else:
+		embed = discord.Embed(color=member.color, timestamp=ctx.message.created_at)
 
+		embed.set_author(name=f"Level - {member}", icon_url=self.bot.users.avatar_url)
+
+		embed.add_field(name="Level", value=self.users[author_id]['level'])
+		embed.add_field(name="Xp", value=self.users[author_id]['exp'])
+
+		await ctx.send(embed=embed)
 
 
 
