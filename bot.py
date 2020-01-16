@@ -114,6 +114,7 @@ async def magic8ball(ctx):
                                           "Paris is an asshole :8ball: ",
                                           "Wlu gaming :8ball: ",
                                           "Hello :8ball: %s!" % ctx.message.author.mention,
+                                          "Viki katsikali :8ball: ",
 
 
 
