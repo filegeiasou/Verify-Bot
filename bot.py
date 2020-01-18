@@ -127,7 +127,7 @@ async def help(ctx):
     author = ctx.message.author
 
     embed = discord.Embed(
-        colour = discord.Color.purple()
+        colour = discord.Color.red()
     )
     embed.set_author(name="Addiction Bot - Help and Documentation")
     embed.add_field(name="a!help", value="Your using it right now", inline=False)
