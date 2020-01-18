@@ -141,7 +141,8 @@ async def help(ctx):
     embed.add_field(name="a!datetime", value="You can see the datetime ", inline=False)
     embed.add_field(name="a!ban", value="You can ban ", inline=False)
     embed.add_field(name="a!unban", value="You can unban ", inline=False)
-    embed.add_field(name="a!echo", value="Is not ready yet ", inline=False)
+    embed.add_field(name="a!add", value="Is not ready yet ", inline=False)
+    embed.add_field(name="a!multiply", value="Is not ready yet ", inline=False)
 
     await ctx.channel.send("I sent you a dm!")
     await author.send(embed=embed)
@@ -156,13 +157,16 @@ async def datetime(ctx):
     await ctx.channel.send(f"This message was sent on: {ctx.message.created_at}")
 
 
-                     
-    
     
     
 @bot.command()
-async def echo(ctx, *, content:str):
-    await ctx.send(content)
+async def add(ctx, a: int, b: int):
+    await ctx.send(a+b)
+
+@bot.command()
+async def multiply(ctx, a: int, b: int):
+    await ctx.send(a*b)
+
 
 
 
