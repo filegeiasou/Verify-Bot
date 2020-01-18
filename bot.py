@@ -198,7 +198,7 @@ async def quickpoll(self, ctx, question, *options: str):
             for reaction in reactions[:len(options)]:
                 await self.bot.add_reaction(react_message, reaction)
                 embed.set_footer(text='Poll ID: {}'.format(react_message.id)
-                             await self.bot.edit_message(react_message, embed=embed)
+                await self.bot.edit_message(react_message, embed=embed)
 
 
 
