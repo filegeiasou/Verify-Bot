@@ -168,6 +168,13 @@ async def say(ctx, *, something):
         
     await ctx.send(f"{ctx.message.author.mention} said: **{something}**")
 
+ 
+
+
+@bot.command()
+async def reply(ctx,*,question):
+    responses = ["yes", "maybe","no"]
+    await ctx.send(f"question: {question}\nanswer: {random.choice(responses)} ")
 
 
 
