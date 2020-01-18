@@ -141,8 +141,8 @@ async def help(ctx):
     embed.add_field(name="a!datetime", value="You can see the datetime ", inline=False)
     embed.add_field(name="a!ban", value="You can ban ", inline=False)
     embed.add_field(name="a!unban", value="You can unban ", inline=False)
-    embed.add_field(name="a!add", value="Is not ready yet ", inline=False)
-    embed.add_field(name="a!multiply", value="Is not ready yet ", inline=False)
+    embed.add_field(name="a!say", value="Is not ready yet ", inline=False)
+    
 
     await ctx.channel.send("I sent you a dm!")
     await author.send(embed=embed)
@@ -160,12 +160,13 @@ async def datetime(ctx):
     
     
 @bot.command()
-async def add(ctx, a: int, b: int):
-    await ctx.send(a+b)
-
-@bot.command()
-async def multiply(ctx, a: int, b: int):
-    await ctx.send(a*b)
+async def say(ctx, *, something):
+    """Say something!"""
+    if something is None:
+        await ctx.send("What do you want to say?")
+        return
+        
+    await ctx.send(f"{ctx.message.author.mention} said: **{something}**")
 
 
 
