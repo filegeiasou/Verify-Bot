@@ -141,7 +141,8 @@ async def help(ctx):
     embed.add_field(name="a!datetime", value="You can see the datetime ", inline=False)
     embed.add_field(name="a!ban", value="You can ban ", inline=False)
     embed.add_field(name="a!unban", value="You can unban ", inline=False)
-    embed.add_field(name="a!say", value="Is not ready yet ", inline=False)
+    embed.add_field(name="a!say", value="Say bot what you said ", inline=False)
+    embed.add_field(name="a!reply", value="He answers you the addiction bot ", inline=False)
     
 
     await ctx.channel.send("I sent you a dm!")
