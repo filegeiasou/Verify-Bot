@@ -136,12 +136,12 @@ async def help(ctx):
     embed.add_field(name="a!magic8ball", value="Random things with magic 8 ball", inline=False)
     embed.add_field(name="a!kick", value="You can kick members", inline=False)
     embed.add_field(name="a!clear", value="You can clear message", inline=False)
-    embed.add_field(name="a!info", value="You can take info about bot", inline=False)
-    embed.add_field(name="a!datetime", value="You can see the datetime ", inline=False)
+    embed.add_field(name="a!info", value="Σε γαμαω μουνοπανο", inline=False)
+    embed.add_field(name="a!datetime", value="datetime ", inline=False)
     embed.add_field(name="a!ban", value="You can ban ", inline=False)
     embed.add_field(name="a!unban", value="not ready yet ", inline=False)
-    embed.add_field(name="a!say", value="Say bot what you said ", inline=False)
-    embed.add_field(name="a!reply", value="He answers you the addiction bot ", inline=False)
+    embed.add_field(name="a!say", value="Ειμαι πουτανα ", inline=False)
+    embed.add_field(name="a!reply", value="ταραμοσαλατα ", inline=False)
     
 
     await ctx.channel.send("I sent you a dm!")
