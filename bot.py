@@ -181,4 +181,4 @@ async def reply(ctx,*,question):
 
 
 
-bot.run("NTc5MzU1NjEwMjY5NzQ1MTgz.XWPNlA.FS7raFVqBcp_ie6HmX0-LRnSWbg")
+bot.run("")
