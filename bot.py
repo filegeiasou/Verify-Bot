@@ -7,6 +7,7 @@ from discord.ext import commands, tasks
 from discord.ext.commands import Bot
 from itertools import cycle
 
+#okey
 status = cycle([ "Made by filegeiasou", "write a!help" ])
 bot = commands.Bot(command_prefix="a!", status=discord.Status.online, activity=discord.Game(name="Made by filegeiasou#0935"))
 
